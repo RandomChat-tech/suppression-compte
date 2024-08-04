@@ -1,0 +1,133 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f06, #4a90e2);
+    color: #333;
+}
+
+.warning {
+    color: #ff0000;
+    font-weight: bold;
+    margin-top: 10px;
+    background-color: #fff4f4;
+    padding: 10px;
+    border: 1px solid #ff0000;
+    border-radius: 5px;
+}
+
+.container {
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    transition: transform 0.3s ease;
+    margin: 20px 0;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.step-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.step {
+    position: relative;
+    margin: 20px 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.circle {
+    width: 60px;
+    height: 60px;
+    background-color: #4CAF50;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    z-index: 1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.step-content {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.step-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #444;
+    margin: 0;
+}
+
+.step-description {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+}
+
+.arrow {
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 20px solid #4CAF50;
+    margin: 10px 0;
+    position: relative;
+    z-index: 0;
+    transition: border-top-color 0.3s ease;
+}
+
+.step:hover .circle {
+    background-color: #388E3C;
+}
+
+.step:hover ~ .arrow {
+    border-top-color: #388E3C;
+}
+
+.step:last-child .arrow {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 24px;
+    }
+    .circle {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+    .step-title {
+        font-size: 18px;
+    }
+    .step-description {
+        font-size: 13px;
+    }
+}
